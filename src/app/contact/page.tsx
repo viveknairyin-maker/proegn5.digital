@@ -50,7 +50,7 @@ export default function ContactPage() {
                   WhatsApp
                 </div>
                 <div className="mt-1 text-sm font-semibold tracking-tight">
-                  +91 9611702503
+                  +91 6362131572
                 </div>
               </a>
 
