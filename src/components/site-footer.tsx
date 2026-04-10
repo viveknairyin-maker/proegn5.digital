@@ -50,11 +50,11 @@ export function SiteFooter() {
                 </a>
                 <a
                   className="text-[var(--foreground)] hover:underline"
-                  href="https://wa.me/919611702503"
+                  href="https://wa.me/916362131572"
                   target="_blank"
                   rel="noreferrer"
                 >
-                  WhatsApp: +91 9611702503
+                  WhatsApp: +91 6362131572
                 </a>
                 <a
                   className="text-[var(--foreground)] hover:underline"
