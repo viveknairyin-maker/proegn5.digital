@@ -5,21 +5,21 @@ import { useEffect, useState } from "react";
 
 const team = [
   {
-    name: "Vivek Nair",
+    name: "Vivek Nairy",
     role: "Founder",
-    bio: "Leads product strategy and delivery across every engagement. Focused on helping non-technical founders convert raw ideas into clear execution plans. Works closely with clients from discovery through launch.",
+    bio: "Vision-driven founder focused on helping businesses build a strong digital presence. Leads strategy, growth, and client experience at Progen5.",
     image: "/team/founder.jpg",
   },
   {
-    name: "Ananya Rao",
+    name: "Koushik Achar A",
     role: "Co-founder",
-    bio: "Drives operations, design quality, and client communication. Aligns timelines with business goals so momentum stays high from week one. Ensures each build remains practical, scalable, and user-first.",
+    bio: "DHandles execution and ensures seamless delivery across projects. Focused on turning ideas into high-quality digital solutions with precision and consistency.",
     image: "/team/cofounder.jpg",
   },
   {
-    name: "Core Product Team",
+    name: "Shamith S",
     role: "Team Member",
-    bio: "A cross-functional team covering UX, UI, development, QA, and launch support. Collaborates in short feedback loops for faster iterations and cleaner outcomes. Built to move quickly without compromising quality.",
+    bio: "Manages project delivery and ensures smooth execution from start to finish, maintaining timelines and quality across all client work.",
     image: "/team/team-members.jpg",
   },
 ];
