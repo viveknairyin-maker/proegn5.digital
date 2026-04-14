@@ -13,7 +13,7 @@ const team = [
   {
     name: "Koushik Achar A",
     role: "Co-founder",
-    bio: "DHandles execution and ensures seamless delivery across projects. Focused on turning ideas into high-quality digital solutions with precision and consistency.",
+    bio: "Handles execution and ensures seamless delivery across projects. Focused on turning ideas into high-quality digital solutions with precision and consistency.",
     image: "/team/cofounder.jpg",
   },
   {
@@ -36,12 +36,12 @@ function TeamCard({
   image: string;
 }) {
   return (
-    <article className="relative aspect-[1.91/1] w-full overflow-hidden rounded-3xl border border-white/50 bg-white/45 p-5 shadow-[0_12px_44px_rgba(11,15,25,0.12)] backdrop-blur-xl sm:p-6">
+    <article className="relative w-full overflow-hidden rounded-3xl border border-white/50 bg-white/45 p-4 shadow-[0_12px_44px_rgba(11,15,25,0.12)] backdrop-blur-xl min-[380px]:p-5 sm:min-h-[360px] sm:p-6 md:aspect-[1.91/1] md:min-h-0">
       <div className="pointer-events-none absolute inset-0 opacity-70">
         <div className="morph-blob absolute -left-8 -top-10 h-36 w-36 rounded-[42%_58%_63%_37%/34%_45%_55%_66%] bg-[radial-gradient(circle_at_30%_30%,rgba(74,163,255,0.35),rgba(30,99,255,0.04))]" />
       </div>
-      <div className="relative grid h-full gap-4 sm:grid-cols-[34%_1fr] sm:gap-6">
-        <div className="h-full overflow-hidden rounded-2xl border border-white/60 bg-white/60">
+      <div className="relative grid h-full grid-cols-[110px_1fr] gap-3 min-[380px]:grid-cols-[124px_1fr] min-[380px]:gap-4 sm:grid-cols-[34%_1fr] sm:gap-6">
+        <div className="h-full min-h-[130px] overflow-hidden rounded-2xl border border-white/60 bg-white/60">
           <Image
             src={image}
             alt={`${name} portrait`}
@@ -54,10 +54,10 @@ function TeamCard({
           <div className="text-xs font-semibold uppercase tracking-wider text-[var(--muted)]">
             {role}
           </div>
-          <h3 className="mt-2 text-xl font-semibold tracking-tight sm:text-2xl">
+          <h3 className="mt-1 text-lg font-semibold tracking-tight min-[380px]:text-xl sm:mt-2 sm:text-2xl">
             {name}
           </h3>
-          <p className="mt-3 text-sm leading-6 text-[var(--muted)] sm:text-base">
+          <p className="mt-2 text-sm leading-6 text-[var(--muted)] sm:mt-3 sm:text-base">
             {bio}
           </p>
         </div>

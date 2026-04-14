@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     "Contact Progen5 for a free discovery call and a free prototype. Email, WhatsApp, and Instagram available.",
 };
 
-const INTRO_CALL_VIDEO_ID = "GstHXoHuyek";
+const INTRO_CALL_VIDEO_ID = "Wo-0Q9G4Mn4";
 const INTRO_CALL_EMBED_URL = `https://www.youtube-nocookie.com/embed/${INTRO_CALL_VIDEO_ID}?rel=0`;
 
 export default function ContactPage() {
