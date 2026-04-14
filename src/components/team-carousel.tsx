@@ -8,25 +8,19 @@ const team = [
     name: "Vivek Nair",
     role: "Founder",
     bio: "Leads product strategy and delivery across every engagement. Focused on helping non-technical founders convert raw ideas into clear execution plans. Works closely with clients from discovery through launch.",
-    image: "/team/founder.svg",
+    image: "/team/founder.jpg",
   },
   {
     name: "Ananya Rao",
     role: "Co-founder",
     bio: "Drives operations, design quality, and client communication. Aligns timelines with business goals so momentum stays high from week one. Ensures each build remains practical, scalable, and user-first.",
-    image: "/team/cofounder.svg",
+    image: "/team/cofounder.jpg",
   },
   {
     name: "Core Product Team",
     role: "Team Member",
     bio: "A cross-functional team covering UX, UI, development, QA, and launch support. Collaborates in short feedback loops for faster iterations and cleaner outcomes. Built to move quickly without compromising quality.",
-    image: "/team/team-members.svg",
-  },
-  {
-    name: "Launch & Growth Team",
-    role: "Team Member",
-    bio: "Supports content, quality checks, deployment, and post-launch optimizations. Keeps each project stable, measurable, and ready for continuous improvement after release.",
-    image: "/team/team-members.svg",
+    image: "/team/team-members.jpg",
   },
 ];
 
