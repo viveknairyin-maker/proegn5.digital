@@ -51,8 +51,46 @@ html {
   animation: marquee 28s linear infinite;
 }
 
+@keyframes team-marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.team-marquee {
+  animation: team-marquee 34s linear infinite;
+}
+
+@keyframes morph-float {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+    border-radius: 42% 58% 63% 37% / 34% 45% 55% 66%;
+  }
+  50% {
+    transform: translate3d(10px, -8px, 0) scale(1.06);
+    border-radius: 54% 46% 38% 62% / 58% 35% 65% 42%;
+  }
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+    border-radius: 42% 58% 63% 37% / 34% 45% 55% 66%;
+  }
+}
+
+.morph-blob {
+  animation: morph-float 8s ease-in-out infinite;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .marquee {
+    animation: none;
+  }
+  .team-marquee {
+    animation: none;
+  }
+  .morph-blob {
     animation: none;
   }
 }

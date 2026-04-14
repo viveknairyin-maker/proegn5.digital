@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Container } from "@/components/container";
+import { TeamCarousel } from "@/components/team-carousel";
 
 export const metadata: Metadata = {
   title: "About",
@@ -12,6 +13,8 @@ export default function AboutPage() {
   return (
     <div className="pb-16 pt-14 sm:pt-16">
       <Container>
+        <TeamCarousel />
+
         <div className="grid gap-10 xl:grid-cols-[1.2fr_1fr] xl:items-start">
           <div className="space-y-6">
             <div className="text-xs font-semibold uppercase tracking-wider text-[var(--muted)]">

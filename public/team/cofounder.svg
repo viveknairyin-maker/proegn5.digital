@@ -1,0 +1,12 @@
+<svg width="720" height="720" viewBox="0 0 720 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g2" x1="56" y1="86" x2="676" y2="686" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#B0E7FF"/>
+      <stop offset="1" stop-color="#2E8CFF"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="720" rx="64" fill="url(#g2)"/>
+  <circle cx="360" cy="278" r="134" fill="white" fill-opacity="0.88"/>
+  <path d="M151 621C151 505.573 244.573 412 360 412V412C475.427 412 569 505.573 569 621V622H151V621Z" fill="white" fill-opacity="0.88"/>
+  <text x="52" y="674" fill="white" fill-opacity="0.9" font-family="Arial, sans-serif" font-size="52" font-weight="700">Co-founder</text>
+</svg>
