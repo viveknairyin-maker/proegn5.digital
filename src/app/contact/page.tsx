@@ -9,10 +9,39 @@ export const metadata: Metadata = {
     "Contact Progen5 for a free discovery call and a free prototype. Email, WhatsApp, and Instagram available.",
 };
 
+const INTRO_CALL_VIDEO_ID = "GstHXoHuyek";
+const INTRO_CALL_EMBED_URL = `https://www.youtube-nocookie.com/embed/${INTRO_CALL_VIDEO_ID}?rel=0`;
+
 export default function ContactPage() {
   return (
     <div className="pb-16 pt-14 sm:pt-16">
       <Container>
+        <section className="mb-10 rounded-3xl border border-[var(--border)] bg-white/70 p-6 backdrop-blur sm:p-8">
+          <div className="text-xs font-semibold uppercase tracking-wider text-[var(--muted)]">
+            15-minute introductory call
+          </div>
+          <h2 className="mt-2 text-2xl font-semibold tracking-tight sm:text-3xl">
+            Watch how our intro call works
+          </h2>
+          <p className="mt-3 max-w-2xl text-sm leading-6 text-[var(--muted)] sm:text-base">
+            Get a quick walkthrough before booking. This video plays right here
+            on the page, then you can share your project details below.
+          </p>
+          <div className="mt-5 overflow-hidden rounded-2xl border border-[var(--border)] bg-black">
+            <div className="relative w-full pt-[56.25%]">
+              <iframe
+                className="absolute inset-0 h-full w-full"
+                src={INTRO_CALL_EMBED_URL}
+                title="Progen5 introductory call"
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              />
+            </div>
+          </div>
+        </section>
+
         <div className="grid gap-10 lg:grid-cols-2 lg:items-start">
           <div className="space-y-4">
             <div className="text-xs font-semibold uppercase tracking-wider text-[var(--muted)]">
