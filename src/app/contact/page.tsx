@@ -71,7 +71,7 @@ export default function ContactPage() {
 
               <a
                 className="rounded-2xl border border-[var(--border)] bg-white/70 px-5 py-4 backdrop-blur transition-transform hover:-translate-y-0.5"
-                href="https://wa.me/919611702503?text=Hi%20Progen5%2C%20I%20want%20to%20build%20a%20digital%20product.%20Can%20we%20do%20a%20free%20discovery%20call%3F"
+                href="https://wa.me/916362131572"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -134,6 +134,34 @@ export default function ContactPage() {
             </div>
           </div>
         </div>
+
+        <section className="mt-12 rounded-3xl border border-[var(--border)] bg-white/70 p-6 backdrop-blur sm:p-8">
+          <div className="text-xs font-semibold uppercase tracking-wider text-[var(--muted)]">
+            Before you submit
+          </div>
+          <h2 className="mt-2 text-2xl font-semibold tracking-tight sm:text-3xl">
+            What details help us give better recommendations
+          </h2>
+          <p className="mt-3 max-w-3xl text-sm leading-6 text-[var(--muted)] sm:text-base">
+            The more context you share, the faster we can give you a practical roadmap. Include your
+            product idea, the audience you want to serve, your preferred launch timeline, and whether
+            you need only design, only development, or complete end-to-end execution.
+          </p>
+          <ul className="mt-5 grid gap-3 sm:grid-cols-2">
+            <li className="rounded-2xl border border-[var(--border)] bg-white/60 px-4 py-3 text-sm leading-6 text-[var(--muted)]">
+              Clear problem statement and business goal
+            </li>
+            <li className="rounded-2xl border border-[var(--border)] bg-white/60 px-4 py-3 text-sm leading-6 text-[var(--muted)]">
+              Must-have features for version one
+            </li>
+            <li className="rounded-2xl border border-[var(--border)] bg-white/60 px-4 py-3 text-sm leading-6 text-[var(--muted)]">
+              Target launch window and budget expectations
+            </li>
+            <li className="rounded-2xl border border-[var(--border)] bg-white/60 px-4 py-3 text-sm leading-6 text-[var(--muted)]">
+              Any examples you like for style or functionality
+            </li>
+          </ul>
+        </section>
       </Container>
     </div>
   );

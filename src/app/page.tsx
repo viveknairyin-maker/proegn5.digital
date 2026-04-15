@@ -30,17 +30,17 @@ export default function Home() {
                   Explore our services
                 </MagneticButton>
               </div>
-              <div className="flex flex-wrap gap-3 text-xs font-semibold text-[var(--muted)]">
-                <span className="rounded-full border border-[var(--border)] bg-white/60 px-3 py-2">
+              <ul className="flex flex-wrap gap-3 text-xs font-semibold text-[var(--muted)]">
+                <li className="rounded-full border border-[var(--border)] bg-white/60 px-3 py-2">
                   Free prototype before you pay
-                </span>
-                <span className="rounded-full border border-[var(--border)] bg-white/60 px-3 py-2">
+                </li>
+                <li className="rounded-full border border-[var(--border)] bg-white/60 px-3 py-2">
                   Non-tech friendly process
-                </span>
-                <span className="rounded-full border border-[var(--border)] bg-white/60 px-3 py-2">
+                </li>
+                <li className="rounded-full border border-[var(--border)] bg-white/60 px-3 py-2">
                   Fast & clean delivery
-                </span>
-              </div>
+                </li>
+              </ul>
             </div>
 
             <div className="relative">
@@ -60,7 +60,7 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className="mt-6 grid gap-3">
+                <ul className="mt-6 grid gap-3">
                   {[
                     "Design in Figma (wireframes → UI screens)",
                     "Landing page or full website",
@@ -68,7 +68,7 @@ export default function Home() {
                     "Branding + launch support",
                     "Optional AI chatbot for lead capture",
                   ].map((t) => (
-                    <div
+                    <li
                       key={t}
                       className="group flex items-center gap-3 rounded-2xl border border-[var(--border)] bg-white/60 px-4 py-3 transition-transform hover:-translate-y-0.5"
                     >
@@ -79,36 +79,36 @@ export default function Home() {
                       <span className="ml-auto text-xs font-semibold text-[var(--muted)] opacity-0 transition-opacity group-hover:opacity-100">
                         Learn more →
                       </span>
-                    </div>
+                    </li>
                   ))}
-                </div>
+                </ul>
 
-                <div className="mt-6 flex flex-wrap items-center gap-3">
-                  <div className="rounded-2xl border border-[var(--border)] bg-white/60 px-4 py-3">
+                <ul className="mt-6 flex flex-wrap items-center gap-3">
+                  <li className="rounded-2xl border border-[var(--border)] bg-white/60 px-4 py-3">
                     <div className="text-xl font-semibold tracking-tight">
                       15+
                     </div>
                     <div className="text-xs font-semibold text-[var(--muted)]">
                       Projects delivered
                     </div>
-                  </div>
-                  <div className="rounded-2xl border border-[var(--border)] bg-white/60 px-4 py-3">
+                  </li>
+                  <li className="rounded-2xl border border-[var(--border)] bg-white/60 px-4 py-3">
                     <div className="text-xl font-semibold tracking-tight">
                       100%
                     </div>
                     <div className="text-xs font-semibold text-[var(--muted)]">
                       Client satisfaction
                     </div>
-                  </div>
-                  <div className="rounded-2xl border border-[var(--border)] bg-white/60 px-4 py-3">
+                  </li>
+                  <li className="rounded-2xl border border-[var(--border)] bg-white/60 px-4 py-3">
                     <div className="text-xl font-semibold tracking-tight">
                       4–6 weeks
                     </div>
                     <div className="text-xs font-semibold text-[var(--muted)]">
                       Typical MVP timeline
                     </div>
-                  </div>
-                </div>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>

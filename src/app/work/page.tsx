@@ -63,7 +63,7 @@ function ProjectCard({
         : "aspect-[16/10]";
 
   return (
-    <div
+    <article
       className={[
         "group relative overflow-hidden rounded-[28px] border border-[var(--border)] bg-white/70 backdrop-blur",
         "transition-[transform,box-shadow] hover:-translate-y-1 hover:shadow-[0_18px_60px_rgba(11,15,25,0.10)]",
@@ -129,16 +129,16 @@ function ProjectCard({
           </a>
         </div>
 
-        <div className="mt-4 flex flex-wrap gap-2">
+        <ul className="mt-4 flex flex-wrap gap-2">
           {p.tags.map((t) => (
-            <span
+            <li
               key={t}
               className="rounded-full border border-[var(--border)] bg-white/60 px-3 py-1 text-xs font-semibold text-[var(--muted)]"
             >
               {t}
-            </span>
+            </li>
           ))}
-        </div>
+        </ul>
 
         <div className="mt-5 rounded-2xl border border-[var(--border)] bg-white/60 px-4 py-3">
           <div className="text-xs font-semibold uppercase tracking-wider text-[var(--muted)]">
@@ -149,7 +149,7 @@ function ProjectCard({
           </div>
         </div>
       </div>
-    </div>
+    </article>
   );
 }
 
@@ -219,6 +219,26 @@ export default function WorkPage() {
             ))}
           </div>
         </div>
+
+        <section className="mt-10 rounded-3xl border border-[var(--border)] bg-white/70 p-6 backdrop-blur sm:p-8">
+          <div className="text-xs font-semibold uppercase tracking-wider text-[var(--muted)]">
+            Portfolio context
+          </div>
+          <h2 className="mt-2 text-2xl font-semibold tracking-tight sm:text-3xl">
+            How to read these project examples
+          </h2>
+          <p className="mt-3 max-w-3xl text-sm leading-6 text-[var(--muted)] sm:text-base">
+            Each case study represents a real delivery pattern we use for startups and business teams:
+            discovery, prototype validation, focused design, rapid build, and launch support. Depending
+            on your scope, we can ship a simple website in a few days or a working MVP in a few weeks.
+            If your requirements are unique, we adapt the process while keeping communication simple and
+            outcomes measurable.
+          </p>
+          <p className="mt-3 max-w-3xl text-sm leading-6 text-[var(--muted)] sm:text-base">
+            We can also extend existing products, redesign outdated interfaces, improve conversion-focused
+            landing pages, and integrate AI assistants for lead capture or customer support workflows.
+          </p>
+        </section>
       </Container>
     </div>
   );

@@ -111,17 +111,17 @@ export default function ServicesPage() {
                     <div className="text-xs font-semibold uppercase tracking-wider text-[var(--muted)]">
                       Includes
                     </div>
-                    <div className="mt-3 space-y-2">
+                    <ul className="mt-3 space-y-2">
                       {p.includes.map((x) => (
-                        <div
+                        <li
                           key={x}
                           className="flex items-center gap-3 text-sm font-medium"
                         >
                           <span className="h-2 w-2 rounded-full bg-[var(--blue)]" />
                           <span>{x}</span>
-                        </div>
+                        </li>
                       ))}
-                    </div>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -132,7 +132,7 @@ export default function ServicesPage() {
             {packages
               .filter((p) => !("badge" in p && p.badge))
               .map((p) => (
-                <div
+                <article
                   key={p.title}
                   className="group rounded-3xl border border-[var(--border)] bg-white/70 p-6 backdrop-blur transition-[transform,box-shadow] hover:-translate-y-1 hover:shadow-[0_18px_50px_rgba(11,15,25,0.08)]"
                 >
@@ -145,17 +145,17 @@ export default function ServicesPage() {
                   <div className="mt-2 text-sm leading-6 text-[var(--muted)]">
                     {p.desc}
                   </div>
-                  <div className="mt-4 space-y-2">
+                  <ul className="mt-4 space-y-2">
                     {p.includes.slice(0, 4).map((x) => (
-                      <div
+                      <li
                         key={x}
                         className="flex items-center gap-3 text-xs font-semibold text-[var(--muted)]"
                       >
                         <span className="h-1.5 w-1.5 rounded-full bg-[var(--blue)]" />
                         {x}
-                      </div>
+                      </li>
                     ))}
-                  </div>
+                  </ul>
                   <div className="mt-5">
                     <Link
                       href="/contact"
@@ -164,7 +164,7 @@ export default function ServicesPage() {
                       Enquire →
                     </Link>
                   </div>
-                </div>
+                </article>
               ))}
           </div>
         </section>

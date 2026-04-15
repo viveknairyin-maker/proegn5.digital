@@ -1,0 +1,22 @@
+Project: Progen5
+URL: https://progen5.com
+Summary: Progen5 is a startup execution agency helping non-technical founders design, build, and launch digital products.
+
+Key Services:
+- Landing pages and websites
+- UI/UX design in Figma
+- MVP development and deployment
+- Brand identity support
+- AI chatbot integration
+
+Primary Pages:
+- https://progen5.com/
+- https://progen5.com/services
+- https://progen5.com/work
+- https://progen5.com/about
+- https://progen5.com/contact
+
+Contact:
+- Email: hechtix@gmail.com
+- WhatsApp: https://wa.me/916362131572
+- Instagram: https://instagram.com/progen5.digital

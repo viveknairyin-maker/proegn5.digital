@@ -5,6 +5,8 @@ import { CursorGlow } from "@/components/cursor-glow";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://progen5.com";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -22,7 +24,7 @@ export const metadata: Metadata = {
   },
   description:
     "Progen5 is a startup execution agency based in India. We help non-technical founders turn ideas into fully launched digital products—design, development, branding, and launch under one roof.",
-  metadataBase: new URL("https://progen5.digital"),
+  metadataBase: new URL(siteUrl),
   openGraph: {
     title: "Progen5 — Turn your Vision into Reality",
     description:
