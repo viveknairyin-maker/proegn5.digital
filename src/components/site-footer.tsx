@@ -70,6 +70,27 @@ export function SiteFooter() {
 
           <div className="space-y-3">
             <div className="text-xs font-semibold uppercase tracking-wider text-[var(--muted)]">
+              Social
+            </div>
+            <div className="grid grid-cols-2 gap-x-4 gap-y-1 text-sm font-medium">
+              <a
+                className="text-[var(--foreground)] hover:underline"
+                href="https://www.linkedin.com/company/progen5"
+                target="_blank"
+                rel="noreferrer"
+              >
+                LinkedIn
+              </a>
+              <a
+                className="text-[var(--foreground)] hover:underline"
+                href="https://www.youtube.com/@progen5"
+                target="_blank"
+                rel="noreferrer"
+              >
+                YouTube
+              </a>
+            </div>
+            <div className="text-xs font-semibold uppercase tracking-wider text-[var(--muted)]">
               Promise
             </div>
             <p className="text-sm leading-6 text-[var(--muted)]">

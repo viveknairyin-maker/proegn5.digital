@@ -5,8 +5,19 @@ import { useEffect, useRef } from "react";
 export function CursorGlow() {
   const raf = useRef<number | null>(null);
   const latest = useRef<{ x: number; y: number } | null>(null);
+  const enabled = useRef(false);
 
   useEffect(() => {
+    const canUseFinePointer = window.matchMedia("(pointer: fine)").matches;
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
+
+    enabled.current = canUseFinePointer && !prefersReducedMotion;
+    if (!enabled.current) {
+      return;
+    }
+
     function onMove(e: MouseEvent) {
       latest.current = { x: e.clientX, y: e.clientY };
       if (raf.current) return;
@@ -36,7 +47,7 @@ export function CursorGlow() {
         className="absolute inset-0"
         style={{
           background:
-            "radial-gradient(650px circle at var(--mx, 50%) var(--my, 30%), rgba(30, 99, 255, 0.16), transparent 55%)",
+          "radial-gradient(650px circle at var(--mx, 50%) var(--my, 30%), rgba(30, 99, 255, 0.16), transparent 55%)",
         }}
       />
       <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(255,255,255,0.88),rgba(255,255,255,1))]" />

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { CursorGlow } from "@/components/cursor-glow";
@@ -19,17 +19,32 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Progen5 — Turn your Vision into Reality",
+    default: "Progen5 Startup Execution Agency | Build and Launch Fast",
     template: "%s — Progen5",
   },
   description:
-    "Progen5 is a startup execution agency based in India. We help non-technical founders turn ideas into fully launched digital products—design, development, branding, and launch under one roof.",
+    "Progen5 helps non-technical founders design, build, and launch websites and MVPs with one fast startup team.",
   metadataBase: new URL(siteUrl),
+  alternates: {
+    canonical: "/",
+    languages: {
+      en: "/",
+      "en-IN": "/",
+      "x-default": "/",
+    },
+  },
   openGraph: {
-    title: "Progen5 — Turn your Vision into Reality",
-    description:
-      "We help non-technical founders turn ideas into fully launched digital products.",
+    title: "Progen5 Startup Execution Agency | Build and Launch Fast",
+    description: "Design, build, and launch websites and MVPs with one startup-focused team.",
+    url: siteUrl,
+    siteName: "Progen5",
+    locale: "en_IN",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Progen5 Startup Execution Agency | Build and Launch Fast",
+    description: "Design, build, and launch websites and MVPs with one startup-focused team.",
   },
   robots: {
     index: true,
@@ -39,6 +54,11 @@ export const metadata: Metadata = {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
   },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({
@@ -52,6 +72,28 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "ProfessionalService",
+              name: "Progen5",
+              url: siteUrl,
+              description:
+                "Progen5 helps non-technical founders design, build, and launch digital products.",
+              email: "hechtix@gmail.com",
+              areaServed: "Worldwide",
+              sameAs: [
+                "https://instagram.com/progen5.digital",
+                "https://www.linkedin.com/company/progen5",
+                "https://x.com/progen5",
+                "https://www.facebook.com/progen5",
+                "https://www.youtube.com/@progen5",
+              ],
+            }),
+          }}
+        />
         <CursorGlow />
         <SiteHeader />
         <main className="flex-1">{children}</main>
