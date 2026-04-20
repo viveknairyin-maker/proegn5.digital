@@ -71,7 +71,7 @@ export function BeforeAfterTabs({
             src,
             alt: `${projectTitle} ${activeTab} screenshot ${index + 1}`,
           }))}
-          aspectClassName="aspect-[16/10]"
+          aspectClassName="aspect-video"
           sizes="(max-width: 768px) 100vw, 55vw"
           priority
         />

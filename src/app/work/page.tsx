@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { BeforeAfterTabs } from "@/components/before-after-tabs";
 import { Container } from "@/components/container";
+import { ProjectMeta } from "@/components/project-meta";
 import { WorkProjectCard } from "@/components/work-project-card";
 import { workProjects } from "@/data/work-projects";
 
@@ -15,7 +17,6 @@ export default function WorkPage() {
   const fromScratchProjects = workProjects.filter(
     (project) => project.type === "from-scratch",
   );
-  const hasSingleRefinement = refinementProjects.length === 1;
 
   return (
     <div className="pb-16 pt-14 sm:pt-16">
@@ -45,20 +46,80 @@ export default function WorkPage() {
         </div>
 
         <section className="mt-10">
-          <div className="text-xs font-semibold uppercase tracking-wider text-[var(--muted)]">
+          <div className="text-center text-xs font-semibold uppercase tracking-wider text-[var(--muted)]">
             Website refinements
           </div>
-          <h2 className="mt-2 text-2xl font-semibold tracking-tight sm:text-3xl">
+          <h2 className="mt-2 text-center text-2xl font-semibold tracking-tight sm:text-3xl">
             Before vs after improvements
           </h2>
-          <div
-            className={[
-              "mt-6 grid gap-6 lg:grid-cols-2",
-              hasSingleRefinement ? "mx-auto max-w-3xl lg:grid-cols-1" : "",
-            ].join(" ")}
-          >
+          <div className="mt-8 grid gap-8">
             {refinementProjects.map((project) => (
-              <WorkProjectCard key={project.id} project={project} />
+              <article
+                key={project.id}
+                className="rounded-[32px] border border-[var(--border)] bg-white/70 p-6 backdrop-blur sm:p-8"
+              >
+                <div className="text-center">
+                  <div className="text-xs font-semibold uppercase tracking-wider text-[var(--muted)]">
+                    Website refinement
+                  </div>
+                  <h3 className="mt-2 text-2xl font-semibold tracking-tight sm:text-3xl">
+                    {project.title}
+                  </h3>
+                  <p className="mx-auto mt-3 max-w-3xl text-sm leading-6 text-[var(--muted)] sm:text-base">
+                    {project.shortDescription}
+                  </p>
+                </div>
+
+                <div className="mt-8 grid gap-8 lg:grid-cols-[1.2fr_0.8fr]">
+                  <div>
+                    <BeforeAfterTabs
+                      projectTitle={project.title}
+                      beforeImages={project.beforeImages}
+                      afterImages={project.afterImages}
+                    />
+                  </div>
+
+                  <div className="space-y-5">
+                    <div className="rounded-2xl border border-[var(--border)] bg-white/60 px-5 py-5">
+                      <div className="text-xs font-semibold uppercase tracking-wider text-[var(--muted)]">
+                        Project details
+                      </div>
+                      <p className="mt-2 text-sm leading-6 text-[var(--foreground)]">
+                        {project.fullDescription}
+                      </p>
+                    </div>
+
+                    <ProjectMeta
+                      duration={project.duration}
+                      liveUrl={project.liveUrl}
+                      testimonial={project.testimonial}
+                    />
+
+                    <div className="rounded-2xl border border-[var(--border)] bg-white/60 px-5 py-5">
+                      <div className="text-xs font-semibold uppercase tracking-wider text-[var(--muted)]">
+                        Key outcomes
+                      </div>
+                      <ul className="mt-3 grid gap-2">
+                        {project.outcomes.map((outcome) => (
+                          <li key={outcome} className="text-sm leading-6 text-[var(--foreground)]">
+                            - {outcome}
+                          </li>
+                        ))}
+                      </ul>
+                      <ul className="mt-4 flex flex-wrap gap-2">
+                        {project.tags.map((tag) => (
+                          <li
+                            key={tag}
+                            className="rounded-full border border-[var(--border)] bg-white px-3 py-1 text-xs font-semibold text-[var(--muted)]"
+                          >
+                            {tag}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </article>
             ))}
           </div>
         </section>
