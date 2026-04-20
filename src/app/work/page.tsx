@@ -46,13 +46,7 @@ export default function WorkPage() {
         </div>
 
         <section className="mt-10">
-          <div className="text-center text-xs font-semibold uppercase tracking-wider text-[var(--muted)]">
-            Website refinements
-          </div>
-          <h2 className="mt-2 text-center text-2xl font-semibold tracking-tight sm:text-3xl">
-            Before vs after improvements
-          </h2>
-          <div className="mt-8 grid gap-8">
+          <div className="grid gap-8">
             {refinementProjects.map((project) => (
               <article
                 key={project.id}
