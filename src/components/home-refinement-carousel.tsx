@@ -64,7 +64,7 @@ export function HomeRefinementCarousel({
         <article className="mt-6 grid gap-6 lg:grid-cols-[1.3fr_1fr]">
           <div className="grid gap-4 sm:grid-cols-2">
             <figure className="overflow-hidden rounded-2xl border border-[var(--border)] bg-white">
-              <div className="relative aspect-[4/3] w-full">
+              <div className="relative aspect-video w-full">
                 <Image
                   src={beforePreview}
                   alt={`${active.title} before preview`}
@@ -79,7 +79,7 @@ export function HomeRefinementCarousel({
             </figure>
 
             <figure className="overflow-hidden rounded-2xl border border-[var(--border)] bg-white">
-              <div className="relative aspect-[4/3] w-full">
+              <div className="relative aspect-video w-full">
                 <Image
                   src={afterPreview}
                   alt={`${active.title} after preview`}

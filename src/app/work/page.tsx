@@ -15,6 +15,7 @@ export default function WorkPage() {
   const fromScratchProjects = workProjects.filter(
     (project) => project.type === "from-scratch",
   );
+  const hasSingleRefinement = refinementProjects.length === 1;
 
   return (
     <div className="pb-16 pt-14 sm:pt-16">
@@ -50,7 +51,12 @@ export default function WorkPage() {
           <h2 className="mt-2 text-2xl font-semibold tracking-tight sm:text-3xl">
             Before vs after improvements
           </h2>
-          <div className="mt-6 grid gap-6 lg:grid-cols-2">
+          <div
+            className={[
+              "mt-6 grid gap-6 lg:grid-cols-2",
+              hasSingleRefinement ? "mx-auto max-w-3xl lg:grid-cols-1" : "",
+            ].join(" ")}
+          >
             {refinementProjects.map((project) => (
               <WorkProjectCard key={project.id} project={project} />
             ))}
