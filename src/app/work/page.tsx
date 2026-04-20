@@ -13,8 +13,11 @@ export const metadata: Metadata = {
 };
 
 export default function WorkPage() {
-  const refinementProjects = workProjects.filter((project) => project.type === "refinement");
-  const fromScratchProjects = workProjects.filter(
+  const showcasedProjects = workProjects.slice(0, 2);
+  const refinementProjects = showcasedProjects.filter(
+    (project) => project.type === "refinement",
+  );
+  const fromScratchProjects = showcasedProjects.filter(
     (project) => project.type === "from-scratch",
   );
 
