@@ -1,7 +1,9 @@
 import Link from "next/link";
 import { Container } from "@/components/container";
+import { HomeRefinementCarousel } from "@/components/home-refinement-carousel";
 import { MagneticButton } from "@/components/magnetic-button";
 import { TestimonialsMarquee } from "@/components/testimonials-marquee";
+import { featuredHomeProjects } from "@/data/work-projects";
 
 export default function Home() {
   return (
@@ -114,6 +116,10 @@ export default function Home() {
           </div>
         </Container>
       </section>
+
+      <Container>
+        <HomeRefinementCarousel projects={featuredHomeProjects} />
+      </Container>
 
       <section className="mt-20">
         <Container>
