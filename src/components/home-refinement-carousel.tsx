@@ -15,7 +15,21 @@ export function HomeRefinementCarousel({
   caseStudyHref = "/work",
 }: Props) {
   const [index, setIndex] = useState(0);
-  const items = useMemo(() => projects.filter((project) => project.featuredOnHome), [projects]);
+  const items = useMemo(() => {
+    const featuredRefinements = projects
+      .filter((project) => project.featuredOnHome && project.type === "refinement")
+      .sort((a, b) => {
+        if (a.thisMonthRefinement) return -1;
+        if (b.thisMonthRefinement) return 1;
+        return b.completionDate.localeCompare(a.completionDate);
+      });
+
+    if (featuredRefinements.length > 0) return featuredRefinements;
+
+    return projects
+      .filter((project) => project.featuredOnHome)
+      .sort((a, b) => b.completionDate.localeCompare(a.completionDate));
+  }, [projects]);
   const canNavigate = items.length > 1;
   const active = items[index];
 
