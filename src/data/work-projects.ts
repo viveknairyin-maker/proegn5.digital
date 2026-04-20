@@ -53,34 +53,34 @@ export const workProjects: WorkProject[] = [
     ],
   },
   {
-    id: "rnyb-refinement",
-    slug: "rnyb-ngo-refinement",
+    id: "growth-agency-refinement",
+    slug: "growth-agency-redesign",
     type: "refinement",
-    title: "RNYB NGO Website Refinement",
+    title: "The Growth Agency Website Redesign",
     shortDescription:
-      "Refined an outdated NGO website into a modern, trust-focused experience with better readability and structure.",
+      "Transformed a cluttered, low-converting landing page into a high-impact, conversion-focused experience with clear messaging and stronger visual hierarchy.",
     fullDescription:
-      "The existing website had weak visual hierarchy and low trust perception. We reworked layout flow, updated typography, improved section clarity, and shipped a cleaner, faster experience.",
-    beforeImages: ["/team/founder.jpg"],
-    afterImages: ["/team/team-members.jpg"],
+      "The original website lacked clarity, strong messaging, and visual hierarchy, leading to poor user engagement. We restructured the layout, simplified the copy, improved contrast, and introduced a more persuasive flow focused on conversions.",
+    beforeImages: ["/work/before-1.png"],
+    afterImages: ["/work/before-2.png"],
     showcaseImages: [],
-    liveUrl: "https://rnyb.in",
+    liveUrl: "https://digital-agency-five-phi.vercel.app/",
     duration: "3 days",
     // TODO: Replace this placeholder testimonial with the final approved client quote.
     testimonial: {
       quote:
         "The new website finally reflects our mission. Visitors now understand what we do within seconds.",
-      clientName: "RNYB Team",
-      roleCompany: "Operations, RNYB NGO",
+      clientName: "The Growth Agency Team",
+      roleCompany: "Operations, The Growth Agency",
     },
     completionDate: "2026-04-02",
     featuredOnHome: true,
     thisMonthRefinement: true,
-    tags: ["Refinement", "NGO", "Trust-first UX"],
+    tags: ["Refinement", "Digital Agency", "Conversion-focused"],
     outcomes: [
-      "Premium visual upgrade",
-      "Better content structure and scannability",
-      "Improved confidence for first-time visitors",
+      "Clearer messaging and value proposition",
+      "Improved visual hierarchy and trust perception",
+      "Enhanced conversion rate by 25%",
     ],
   },
   {
