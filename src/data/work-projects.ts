@@ -64,7 +64,7 @@ export const workProjects: WorkProject[] = [
     beforeImages: ["/work/before-1.png"],
     afterImages: ["/work/before-2.png"],
     showcaseImages: [],
-    liveUrl: "https://digital-agency-five-phi.vercel.app/",
+    liveUrl: "https://thegrowthagency.in",
     duration: "3 days",
     // TODO: Replace this placeholder testimonial with the final approved client quote.
     testimonial: {
@@ -81,30 +81,6 @@ export const workProjects: WorkProject[] = [
       "Clearer messaging and value proposition",
       "Improved visual hierarchy and trust perception",
       "Enhanced conversion rate by 25%",
-    ],
-  },
-  {
-    id: "founder-landing",
-    slug: "founder-service-landing",
-    type: "from-scratch",
-    title: "Founder Service Landing Page",
-    shortDescription:
-      "Created a high-conversion landing page from scratch for an early-stage founder-led service business.",
-    fullDescription:
-      "We built a focused page architecture around offer clarity, objection handling, and simple CTAs to increase inquiry quality.",
-    beforeImages: [],
-    afterImages: [],
-    showcaseImages: ["/team/cofounder.jpg", "/team/founder.jpg"],
-    liveUrl: "https://example.com",
-    duration: "5 days",
-    completionDate: "2026-04-10",
-    featuredOnHome: true,
-    thisMonthRefinement: false,
-    tags: ["Built from Scratch", "Landing Page", "Conversion"],
-    outcomes: [
-      "Clear value proposition above the fold",
-      "Structured social proof placement",
-      "Faster path to contact form submission",
     ],
   },
 ];
