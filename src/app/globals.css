@@ -95,21 +95,3 @@ html {
   }
 }
 
-@keyframes auto-scroll-preview-pan-y {
-  0% {
-    background-position: 50% 0%;
-  }
-  100% {
-    background-position: 50% 100%;
-  }
-}
-
-[data-auto-scroll="on"] {
-  animation: auto-scroll-preview-pan-y 14s linear infinite alternate;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  [data-auto-scroll="on"] {
-    animation: none;
-  }
-}

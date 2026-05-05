@@ -1,7 +1,7 @@
 import { BeforeAfterTabs } from "@/components/before-after-tabs";
-import { AutoScrollPreview } from "@/components/auto-scroll-preview";
 import { ImageCarousel } from "@/components/image-carousel";
 import { ProjectMeta } from "@/components/project-meta";
+import { ScrollablePreview } from "@/components/scrollable-preview";
 import type { WorkProject } from "@/data/work-projects";
 
 type Props = {
@@ -34,7 +34,7 @@ export function WorkProjectCard({ project }: Props) {
           />
         ) : (
           project.showcaseImages.length === 1 ? (
-            <AutoScrollPreview
+            <ScrollablePreview
               src={project.showcaseImages[0] ?? ""}
               alt={`${project.title} preview`}
               aspectClassName="aspect-[16/10]"
