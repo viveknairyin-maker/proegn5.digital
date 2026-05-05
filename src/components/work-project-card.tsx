@@ -1,4 +1,5 @@
 import { BeforeAfterTabs } from "@/components/before-after-tabs";
+import { AutoScrollPreview } from "@/components/auto-scroll-preview";
 import { ImageCarousel } from "@/components/image-carousel";
 import { ProjectMeta } from "@/components/project-meta";
 import type { WorkProject } from "@/data/work-projects";
@@ -32,14 +33,22 @@ export function WorkProjectCard({ project }: Props) {
             afterImages={project.afterImages}
           />
         ) : (
-          <ImageCarousel
-            images={project.showcaseImages.map((src, index) => ({
-              src,
-              alt: `${project.title} showcase ${index + 1}`,
-            }))}
-            aspectClassName="aspect-[16/10]"
-            sizes="(max-width: 768px) 100vw, 55vw"
-          />
+          project.showcaseImages.length === 1 ? (
+            <AutoScrollPreview
+              src={project.showcaseImages[0] ?? ""}
+              alt={`${project.title} preview`}
+              aspectClassName="aspect-[16/10]"
+            />
+          ) : (
+            <ImageCarousel
+              images={project.showcaseImages.map((src, index) => ({
+                src,
+                alt: `${project.title} showcase ${index + 1}`,
+              }))}
+              aspectClassName="aspect-[16/10]"
+              sizes="(max-width: 768px) 100vw, 55vw"
+            />
+          )
         )}
 
         <ProjectMeta

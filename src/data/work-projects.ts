@@ -83,6 +83,26 @@ export const workProjects: WorkProject[] = [
       "Enhanced conversion rate by 25%",
     ],
   },
+  {
+    id: "monkey-fitness",
+    slug: "monkey-fitness-website",
+    type: "from-scratch",
+    title: "Monkey Fitness Website",
+    shortDescription:
+      "A bold, high-contrast gym website with strong typography, gallery, and clear CTAs.",
+    fullDescription:
+      "Designed and built a modern fitness website with clear navigation, gallery sections, and a conversion-ready contact flow. Focused on responsive layout and strong visual hierarchy.",
+    beforeImages: [],
+    afterImages: [],
+    showcaseImages: ["/work/monkeyfitness.png"],
+    liveUrl: "https://monkeyfitness.vercel.app/#/",
+    duration: "—",
+    completionDate: "2026-05-05",
+    featuredOnHome: true,
+    thisMonthRefinement: false,
+    tags: ["Built from Scratch", "Fitness", "Website"],
+    outcomes: ["Strong hero + CTAs", "Responsive gallery layout", "Fast, modern dark UI"],
+  },
 ];
 
 export const thisMonthRefinementProject =

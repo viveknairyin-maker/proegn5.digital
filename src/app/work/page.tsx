@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 };
 
 export default function WorkPage() {
-  const showcasedProjects = workProjects.slice(0, 2);
+  const showcasedProjects = workProjects.slice(0, 3);
   const refinementProjects = showcasedProjects.filter(
     (project) => project.type === "refinement",
   );
