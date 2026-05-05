@@ -96,7 +96,7 @@ export const workProjects: WorkProject[] = [
     afterImages: [],
     showcaseImages: ["/work/monkeyfitness.png"],
     liveUrl: "https://monkeyfitness.vercel.app/#/",
-    duration: "—",
+    duration: "2 days",
     completionDate: "2026-05-05",
     featuredOnHome: true,
     thisMonthRefinement: false,
