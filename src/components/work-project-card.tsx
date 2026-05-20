@@ -1,5 +1,6 @@
 import { BeforeAfterTabs } from "@/components/before-after-tabs";
 import { ImageCarousel } from "@/components/image-carousel";
+import { LiveSitePreview } from "@/components/live-site-preview";
 import { ProjectMeta } from "@/components/project-meta";
 import { ScrollablePreview } from "@/components/scrollable-preview";
 import type { WorkProject } from "@/data/work-projects";
@@ -32,23 +33,23 @@ export function WorkProjectCard({ project }: Props) {
             beforeImages={project.beforeImages}
             afterImages={project.afterImages}
           />
+        ) : project.showcaseImages.length === 0 ? (
+          <LiveSitePreview url={project.liveUrl} title={project.title} />
+        ) : project.showcaseImages.length === 1 ? (
+          <ScrollablePreview
+            src={project.showcaseImages[0] ?? ""}
+            alt={`${project.title} preview`}
+            aspectClassName="aspect-[16/10]"
+          />
         ) : (
-          project.showcaseImages.length === 1 ? (
-            <ScrollablePreview
-              src={project.showcaseImages[0] ?? ""}
-              alt={`${project.title} preview`}
-              aspectClassName="aspect-[16/10]"
-            />
-          ) : (
-            <ImageCarousel
-              images={project.showcaseImages.map((src, index) => ({
-                src,
-                alt: `${project.title} showcase ${index + 1}`,
-              }))}
-              aspectClassName="aspect-[16/10]"
-              sizes="(max-width: 768px) 100vw, 55vw"
-            />
-          )
+          <ImageCarousel
+            images={project.showcaseImages.map((src, index) => ({
+              src,
+              alt: `${project.title} showcase ${index + 1}`,
+            }))}
+            aspectClassName="aspect-[16/10]"
+            sizes="(max-width: 768px) 100vw, 55vw"
+          />
         )}
 
         <ProjectMeta
